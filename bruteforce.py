@@ -70,6 +70,7 @@ def main():
     # Stop multiprocessing
     pool.close()
     pool.join()
+    pbar.close()
     # Just incase any results were missed at the end
     with open("decrypted.txt", 'a') as file:
         for key, plaintext in results:
